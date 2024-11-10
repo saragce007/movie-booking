@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../CSS/pay1.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Booking</h1>
+    </header>
+
+    <div class="payment-container">
+        <div class="booking-summary">
+            <h2>Booking Summary</h2>
+            <div class="summary-details">
+                <p>CL-B7 (1 Ticket)</p>
+                <p>SCREEN 3</p>
+                <p>Convenience fees: <span class="convenience-fees">Rs.24.78</span></p>
+            </div>
+            <div class="contribute">
+                <label for="contribute-checkbox">Contribute to BookASmile</label>
+                <input type="checkbox" id="contribute-checkbox">
+                <p>Rs. 0 <span>Add Rs. 1</span></p>
+            </div>
+            <p class="amount-payable">Amount Payable: <span class="total-amount">Rs.151.84</span></p>
+        </div>
+
+        <div class="ticket-type">
+            <h2>Select Ticket Type</h2>
+            <div class="ticket-options">
+                <div class="option">
+                    <input type="radio" id="m-ticket" name="ticket-type" checked>
+                    <label for="m-ticket">
+                        <img src="../IMAGE/mt.jpg" alt="M-Ticket">
+                        M-Ticket
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="box-office" name="ticket-type">
+                    <label for="box-office">
+                        <img src="../IMAGE/bt.jpg" alt="Box Office Pickup">
+                        Box Office Pickup
+                    </label>
+                </div>
+            </div>
+            <p class="instruction">Show the m-ticket QR Code on your mobile to enter the cinema.</p>
+            <div class="consent">
+                <input type="checkbox" id="consent-checkbox">
+                <label for="consent-checkbox">By proceeding, I express my consent to complete this transaction.</label>
+            </div>
+        </div>
+
+        <div class="total-section">
+            <p class="total-amount">Total: Rs. 0.00</p>
+            <button class="proceed-btn" disabled>Proceed</button>
+        </div>
+    </div>
+<br><br><br>
+    <footer>
+        <p>You can cancel the tickets 20 min(s) before the show. Refunds will be done according to our <a href="#">Cancellation Policy</a>.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const convenienceFees = 24.78;
+            const contributionAmount = 1;
+            const totalAmountElement = document.querySelector('.total-amount');
+            const contributeCheckbox = document.getElementById('contribute-checkbox');
+            const proceedButton = document.querySelector('.proceed-btn');
+        
+            function updateTotalAmount() {
+                let totalAmount = parseFloat(sessionStorage.getItem("total-amount")) || 0;
+                totalAmount += convenienceFees;
+                if (contributeCheckbox.checked) {
+                    totalAmount += contributionAmount;
+                }
+                totalAmountElement.textContent = `Total: Rs. ${totalAmount.toFixed(2)}`;
+            }
+        
+            function toggleProceedButton() {
+                proceedButton.disabled = !contributeCheckbox.checked;
+            }
+        
+            contributeCheckbox.addEventListener('change', () => {
+                updateTotalAmount();
+                toggleProceedButton();
+            });
+        
+            document.addEventListener('DOMContentLoaded', updateTotalAmount);
+        
+            proceedButton.addEventListener('click', () => {
+                if (confirm('Are you sure you want to proceed with the payment?')) {
+                    // Show payment successful popup
+                    const img = document.createElement('img');
+                    img.src = '../IMAGE/ps1.png'; // Path to your success image
+                    img.alt = 'Payment Successful';
+                    img.style.width = '300px'; // Increase size of the image
+                    img.style.height = 'auto'; // Maintain aspect ratio
+        
+                    const popup = document.createElement('div');
+                    popup.style.position = 'fixed';
+                    popup.style.top = '50%';
+                    popup.style.left = '50%';
+                    popup.style.transform = 'translate(-50%, -50%)';
+                    popup.style.backgroundColor = 'white';
+                    popup.style.padding = '40px'; // Increase padding for larger box
+                    popup.style.boxShadow = '0 0 15px rgba(0,0,0,0.7)'; // Increase shadow for more prominence
+                    popup.style.zIndex = '1000';
+                    popup.style.textAlign = 'center'; // Center the content
+                    popup.style.borderRadius = '10px'; // Rounded corners
+                    popup.style.maxWidth = '80%'; // Responsive width
+        
+                    popup.appendChild(img);
+        
+                    const closeButton = document.createElement('button');
+                    closeButton.textContent = 'Close';
+                    closeButton.style.backgroundColor = '#4CAF50'; // Green background
+                    closeButton.style.color = 'white'; // White text
+                    closeButton.style.border = 'none'; // Remove border
+                    closeButton.style.padding = '15px 30px'; // Increase padding for larger button
+                    closeButton.style.fontSize = '18px'; // Increase font size
+                    closeButton.style.cursor = 'pointer'; // Pointer cursor on hover
+                    closeButton.style.borderRadius = '5px'; // Rounded corners for button
+        
+                    closeButton.addEventListener('click', () => {
+                        document.body.removeChild(popup);
+                    });
+                    popup.appendChild(closeButton);
+        
+                    document.body.appendChild(popup);
+        
+                    // Optionally redirect or perform further actions
+                    // window.location.href = 'success.html'; // Redirect to a success page
+                }
+            });
+        });
+        </script>
+        
+</body>
+</html>

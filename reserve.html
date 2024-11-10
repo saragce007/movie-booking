@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Time</title>
+    <link rel="stylesheet" href="../CSS/reserve1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h3><img src="../IMAGE/pop.jpg" alt="Movie Ticket Booking Logo"> SHOW TIME</h3>
+        </div>
+    </header><br><br><br><br>
+    <div class="container">
+        <div class="header">
+            <h1>Bookings</h1>
+            <div class="actions">
+                <a href="../HTML/amn.html"><button>BACK</button></a>
+            </div>
+        </div>
+        <div class="filter">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button id="searchButton">🔍 Search</button>
+            <div class="status-filter">
+                <button data-status="all" class="active">All</button>
+                <button data-status="confirmed">Confirmed</button>
+                <button data-status="pending">Pending</button>
+                <button data-status="cancelled">Cancelled</button>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>Name</th>
+                    <th>Tickets</th>
+                    <th>Movie</th>
+                    <th>Showtime</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Tan Nguyen</td>
+                    <td>Adults (€14.00) x 1</td>
+                    <td>Batman & Robin</td>
+                    <td>25-02-2015, 22:00</td>
+                    <td class="status pending">Pending</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Abdul Cobb</td>
+                    <td>Adults (€15.00) x 2</td>
+                    <td>The Godfather</td>
+                    <td>24-02-2015, 18:10</td>
+                    <td class="status pending">Pending</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Orlando Simpson</td>
+                    <td>Adults (€15.00) x 2</td>
+                    <td>The Godfather</td>
+                    <td>24-02-2015, 13:15</td>
+                    <td class="status confirmed">Confirmed</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>August Hendrix</td>
+                    <td>Adults (€14.00) x 1</td>
+                    <td>Batman & Robin</td>
+                    <td>24-02-2015, 13:00</td>
+                    <td class="status confirmed">Confirmed</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Amaya Waller</td>
+                    <td>Adults (€16.00) x 1</td>
+                    <td>Fight Club</td>
+                    <td>24-02-2015, 14:30</td>
+                    <td class="status confirmed">Confirmed</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Garth Torres</td>
+                    <td>Adults (€19.00) x 1</td>
+                    <td>Heat</td>
+                    <td>24-02-2015, 15:30</td>
+                    <td class="status confirmed">Confirmed</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Christine Bass</td>
+                    <td>Adults (€19.00) x 2 Children (€15.00) x 2</td>
+                    <td>Heat</td>
+                    <td>24-02-2015, 15:30</td>
+                    <td class="status cancelled">Cancelled</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Rebecca Salas</td>
+                    <td>Adults (€15.00) x 1</td>
+                    <td>The Godfather</td>
+                    <td>24-02-2015, 13:00</td>
+                    <td class="status confirmed">Confirmed</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Yvonne Ewing</td>
+                    <td>Adults (€15.00) x 1</td>
+                    <td>Fight Club</td>
+                    <td>24-02-2015, 14:30</td>
+                    <td class="status confirmed">Confirmed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div><br><br><br>
+    <footer>
+        <div class="cont">
+            <p>&copy; 2024 Showtime. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const statusButtons = document.querySelectorAll('.status-filter button');
+            const table = document.querySelector('table');
+            const rows = table.querySelectorAll('tbody tr');
+
+            // Function to filter rows based on search input and status
+            function filterRows() {
+                const searchValue = searchInput.value.toLowerCase();
+                const activeStatusButton = document.querySelector('.status-filter button.active');
+                const status = activeStatusButton ? activeStatusButton.getAttribute('data-status') : 'all';
+
+                rows.forEach(row => {
+                    const cells = row.getElementsByTagName('td');
+                    const nameCell = cells[1].textContent.toLowerCase();
+                    const movieCell = cells[3].textContent.toLowerCase();
+                    const statusCell = row.querySelector('.status') ? row.querySelector('.status').textContent.toLowerCase() : '';
+
+                    // Check if row matches search criteria
+                    const matchesSearch = nameCell.includes(searchValue) || movieCell.includes(searchValue);
+
+                    // Check if row matches status filter
+                    const matchesStatus = status === 'all' || statusCell === status;
+
+                    // Show or hide row based on both filters
+                    row.style.display = (matchesSearch && matchesStatus) ? '' : 'none';
+                });
+            }
+
+            // Event listener for search button
+            searchButton.addEventListener('click', filterRows);
+
+            // Event listener for search input
+            searchInput.addEventListener('input', filterRows);
+
+            // Event listeners for status filter buttons
+            statusButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    statusButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to the clicked button
+                    button.classList.add('active');
+                    
+                    // Filter rows based on status and search input
+                    filterRows();
+                });
+            });
+
+            // Set initial status to "All"
+            const allButton = document.querySelector('.status-filter button[data-status="all"]');
+            if (allButton) {
+                allButton.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

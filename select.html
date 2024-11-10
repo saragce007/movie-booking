@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show time</title>
+    <link rel="stylesheet" href="../CSS/select1.css">
+    <link rel="icon" href="../Images/Logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h2><img src="../IMAGE/pop.jpg" alt="Logo"> SHOW TIME </h2>
+            </div> 
+            <nav>
+                <ul>
+                    <li><a href="../HTML/lnd.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <div class="login">
+            <a href="../Online_Movie_Ticket_Booking/HTML/log.html"<button type="button">LOGIN</button></a>
+            </div>
+        </div>
+    </header>
+    <BR><BR>
+    <main>
+        <div class="movie-detail">
+            <div class="movie-info">
+                <h2>SHIDDAT</h2>
+                <h3>3 hrs ,Action,Drama ,Love</h3>
+                <p>Shiddat: Journey Beyond Love, or simply Shiddat ( transl. Passion), is a 2021 Indian Hindi-language romantic drama film directed by Kunal Deshmukh and produced by Bhushan Kumar, Krishan Kumar and Dinesh Vijan under their banners T-Series and Maddock Films.</p>
+                <div class="reviews-likes">
+                    <p><i class="fas fa-thumbs-up"></i> 123 Likes</p>
+                    <p><i class="fas fa-star"></i> 4.5/5 Reviews</p><br>
+                   
+                </div>
+                <br><br>
+            </div>
+            <div class="movie-poster">
+                <img src="../IMAGE/sd1.jpg" alt="Movie Poster">
+            </div>
+        </div>
+        
+        <div class="cinemas-list">
+            <h2>Cinemas in your location</h2>
+            <div class="search-location">
+                <input type="text" id="theaterSearch" placeholder="Enter theater name" oninput="filterTheaters()">
+                <button type="button" onclick="filterTheaters()">Search</button>
+            </div>
+
+            <div id="theaterList">
+                <div class="cinema">
+                    <div class="cinema-details">
+                        <h4>BABA CINEMAS 4K DOLBY ATOMS</h4>
+                        <p>Address: BABA COMPLEX, Puthiyavan Nagar, Sukrawar Pettai, R.S.Puram, Coimbatore.</p>
+                        <p>Description: Experience stunning visuals and sound in 4K Dolby Atmos at BABA Cinemas.</p>
+                    </div>
+                    <div class="cinema-image">
+                        <img src="../IMAGE/tar1.jpg" alt="BABA CINEMAS">
+                    </div>
+                    <div class="cinema-timings">
+                        <p>Show Timings:</p>
+                        <div class="timings-horizontal">
+                            <span>10:00 AM</span>
+                            <span>01:00 PM</span>
+                            <span>04:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="book-now">
+                        <a href="../HTML/seat.html" class="button">BOOK NOW</a>
+                    </div>
+                </div>
+
+                <div class="cinema">
+                    <div class="cinema-details">
+                        <h4>APA CINEMAS 3D DOLBY ATMOS</h4>
+                        <p>Address: No.12, Pollachi Main Road, Kinathukadavu, Coimbatore.</p>
+                        <p>Description: Watch movies in immersive 3D and Dolby Atmos at APA Cinemas.</p>
+                    </div>
+                    <div class="cinema-image">
+                        <img src="../IMAGE/tar2.jpg" alt="APA CINEMAS">
+                    </div>
+                    <div class="cinema-timings">
+                        <p>Show Timings:</p>
+                        <div class="timings-horizontal">
+                            <span>11:00 AM</span>
+                            <span>02:00 PM</span>
+                            <span>05:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="book-now">
+                        <a href="../HTML/seat.html" class="button">BOOK NOW</a>
+                    </div>
+                </div>
+
+                <!-- Add more cinema entries as needed -->
+            </div>
+
+            <div id="noResults" style="display: none;">
+                <p>No theaters found matching your search.</p>
+            </div>
+        </div>
+        <div class="movie-cast">
+            <h2>Movie Cast</h2>
+            <div class="cast-list">
+                <div class="cast-member">
+                    <img src="../IMAGE/C.jpg" alt="Kamal Hassan">
+                    <p>Kamal Hassan</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/C1.jpg" alt="Kajal Aggarwal">
+                    <p>Kajal Aggarwal</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/C2.jpg" alt="Siddharth">
+                    <p>Siddharth</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/C3.webp" alt="Rakul Preet Singh">
+                    <p>Rakul Preet Singh</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/C4.jpg" alt="Priya Bhavani">
+                    <p>Priya Bhavani</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/C5.webp" alt="Samuthirakani">
+                    <p>Samuthirakani</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/C6.jpg" alt="Bobby">
+                    <p>Bobby</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/c8.jpg" alt="Bobby">
+                    <p>Bobby</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/c9.jpg" alt="Bobby">
+                    <p>Bobby</p>
+                </div>
+                <div class="cast-member">
+                    <img src="../IMAGE/c7.jpg" alt="Bobby">
+                    <p>Bobby</p>
+                </div>
+                <!-- Add more cast members as needed -->
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Map</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Location Map</a></li>
+                    <li><a href="#"><i class="fas fa-directions"></i> Directions</a></li>
+                    <li><a href="#"><i class="fas fa-map"></i> Current Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quicklinks</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-graduate"></i> HOME</a></li>
+                    <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> ABOUT US</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                    <li><a href="#"><i class="fas fa-life-ring"></i> Support Center</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <ul class="quick-links">
+            <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul><br>
+        <p>&copy; 2024 Movie Ticket Booking. All rights reserved.</p><br>
+    </footer>
+
+    <script>
+        function filterTheaters() {
+            const searchQuery = document.getElementById('theaterSearch').value.toLowerCase();
+            const theaters = document.querySelectorAll('.cinema');
+            let found = false;
+
+            theaters.forEach(theater => {
+                const theaterName = theater.querySelector('.cinema-details h4').textContent.toLowerCase();
+                if (theaterName.includes(searchQuery)) {
+                    theater.style.display = 'flex';
+                    found = true;
+                } else {
+                    theater.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = found ? 'none' : 'block';
+        }
+    </script>
+
+    
+</body>
+</html>

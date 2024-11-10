@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showtime</title>
+    <link rel="stylesheet" href="../CSS/log1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Showtime</h1>
+        <nav>
+            <ul>
+                <li><a href="../HTML/lnd.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" onclick="showForm('signin')">Sign In</a></li>
+                <li><a href="#" onclick="showForm('signup')">Sign Up</a></li>
+                <li><a href="#" onclick="showForm('forgot-password')">Forgot Password</a></li>
+                <li><a href="#" onclick="showForm('guest')">Guest Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="marquee-container">
+            <div class="marquee">
+                <img src="../IMAGE/tk.webp" alt="Marquee Background">
+                <img src="../IMAGE/tk.webp" alt="Marquee Background 2">
+            </div>
+        </div>
+
+        <div id="signin" class="form-container">
+            <h2>Sign In</h2>
+            <form class="form-group" onsubmit="return validateSignIn()">
+                <div class="form-group">
+                    <label for="signin-role">Role</label>
+                    <select id="signin-role" required>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                        <option value="officer">Officer</option>
+                    </select><br><br>
+                </div>
+                <div id="admin-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="signin-email">Email</label>
+                        <input type="email" id="signin-email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password">
+                    </div>
+                </div>
+                <div id="user-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-password">Password</label>
+                        <input type="password" id="user-password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign In</button>
+                </div>
+                <div class="switch-form">
+                    <label><a href="#" onclick="showForm('signup')">Don't have an account? Sign Up</a></label>
+                </div>
+                <div class="switch-form">
+                    <label><a href="#" onclick="showForm('forgot-password')">Forgot Password?</a></label>
+                </div>
+            </form>
+        </div>
+
+        <div id="signup" class="form-container hidden">
+            <h2>Sign Up</h2>
+            <form class="form-group" onsubmit="return validateSignUp()">
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" minlength="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" minlength="8" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" minlength="8" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" required>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="signup-name-checkbox">
+                        I agree to provide my name
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+                <div class="switch-form">
+                    <label><a href="#" onclick="showForm('signin')">Already have an account? Sign In</a></label>
+                </div>
+            </form>
+        </div>
+
+        <div id="forgot-password" class="form-container hidden">
+            <h2>Forgot Password</h2>
+            <form class="form-group">
+                <div class="form-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="switch-form">
+                    <label><a href="#" onclick="showForm('signin')">Back to Sign In</a></label>
+                </div>
+            </form>
+        </div>
+
+        <div id="guest" class="form-container hidden">
+            <h2>Guest Mode</h2>
+            <p>You are now browsing as a guest. Please sign up or sign in for a better experience.</p>
+            <div class="switch-form">
+                <label><a href="#" onclick="showForm('signin')">Sign In</a></label>
+            </div>
+            <div class="switch-form">
+                <label><a href="#" onclick="showForm('signup')">Sign Up</a></label>
+            </div>
+            <label><a href="#">Skip</a></label>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Map</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Location Map</a></li>
+                    <li><a href="#"><i class="fas fa-directions"></i> Directions</a></li>
+                    <li><a href="#"><i class="fas fa-map"></i> Current Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quicklinks</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-graduate"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                    <li><a href="#"><i class="fas fa-life-ring"></i> Support Center</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Showtime. All rights reserved.</p>
+    </footer>
+
+    <script src="../javascript/log.js"></script>
+</body>
+</html>

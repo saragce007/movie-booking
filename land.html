@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW TIME</title>
+    <link rel="stylesheet" href="../CSS/land1.css">
+    <link rel="icon" href="../IMAGE/lg.png" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <H3><img src="../IMAGE/pop.jpg" alt="Movie Ticket Booking Logo"> SHOW TIME</H3>
+        </div>
+        
+        <nav>
+            <ul>
+                <ul>
+                   
+                    <li><a href="#home"><i class="fas fa-filter"></i> FILTER MOVIES</a></li>
+                    <li><a href="#movies"><i class="fas fa-video"></i> MOVIES</a></li>
+                    <li><a href="#about-us"><i class="fas fa-info-circle"></i> ABOUT US</a></li>
+                    <li><a href="#contact-us"><i class="fas fa-envelope"></i> CONTACT</a></li>
+                    <li><a href="#location"><i class="fas fa-map-marker-alt"></i> LOCATION</a></li>
+            
+                    <li><a href="../HTML/log.html"><i class="fas fa-sign-in-alt"></i> LOGIN</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header><br>
+   
+    
+    <section id="carousel" class="carousel-section">
+        <h2>UPCOMING MOVIES</h2><br>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="../IMAGE/A.jpg" alt="Poster 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="../IMAGE/sss.jpg" alt="Poster 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="../IMAGE/s2.jpg" alt="Poster 3">
+            </div>
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+    
+    <div class="main-container">
+        <aside class="sidebar">
+            <!-- Sidebar content such as filters -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h2>Filter</h2>
+                    <form>
+                        <label for="language">Language:</label>
+                        <select id="language" name="language">
+                            <option value="english">English</option>
+                            <option value="spanish">Spanish</option>
+                        </select>
+                        <label for="format">Format:</label>
+                        <select id="format" name="format">
+                            <option value="2d">2D</option>
+                            <option value="3d">3D</option>
+                        </select>
+                        <label for="genre">Genre:</label>
+                        <select id="genre" name="genre">
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                        </select>
+                        <label for="genre">location:</label>
+                        <select id="location" name="location">
+                            <option value="action">chennai</option>
+                            <option value="comedy">madhurai</option>
+                        </select>
+                        <button type="submit">Apply Filters</button>
+                    </form>
+                    
+
+                </div>
+                
+
+            </section>
+           
+            
+        </aside><a> &nbsp;  &nbsp;</a>
+        <div class="video-container">
+            <h1>Now streaming on theaters</h1>
+            <video controls>
+                <source src="../IMAGE/tr.mp4" type="video/mp4">
+            </video>
+        </div>
+    <main class="main-content">
+        <section id="movies" class="movies-section"><br><br>
+            <h2>RECENT MOVIES</h2><br><br>
+            <div class="movies-grid">
+                 <div class="movie-card">
+                        <img src="../IMAGE/sd1.jpg" alt="Movie 1">
+                        <h3>SHIDDAT</h3>
+                        <p>Genre: ACTION</p>
+                        <a href="../HTML/select.html" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/m2.jpeg" alt="Movie 2">
+                        <h3></h3>
+                        <p>Genre: FANTASY</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/m3.jpeg" alt="Movie 2">
+                        <h3>CIVIL WAR</h3>
+                        <p>Genre: ACTION</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/m4.jpeg" alt="Movie 3">
+                        <h3>SPYDER MAN</h3>
+                        <p>Genre:ADVENTURE</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/m5.jpeg" alt="Movie 1">
+                        <h3>BLACK PANTHER</h3>
+                        <p>Genre: MYSTRY</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/m6.jpeg" alt="Movie 2">
+                        <h3>VENOM</h3>
+                        <p>Genre: SCI-FI</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/m7.jpeg" alt="Movie 2">
+                        <h3>DOCTOR STRANGE</h3>
+                        <p>Genre: ACTION</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="../IMAGE/P6.jpeg" alt="Movie 3">
+                        <h3>US</h3>
+                        <p>Genre: HORROR</p>
+                        <a href="#" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </section><BR><BR>
+            <section id="movies" class="movies-section"><br><br>
+                <H2>RECOMENTED MOVIES</H2><br><br>
+                <div class="movies-grid">
+                     <div class="movie-card">
+                            <img src="../IMAGE/l5.jpeg" alt="Movie 1">
+                            <h3>SUPER DELUXE</h3>
+                            <p>Genre: COMEDY</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/l6.jpeg" alt="Movie 2">
+                            <h3>AIYOTHI</h3>
+                            <p>Genre: DRAMA</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/l7.jpeg" alt="Movie 2">
+                            <h3>96</h3>
+                            <p>Genre: LOVE</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/l1.jpeg" alt="Movie 3">
+                            <h3>24</h3>
+                            <p>Genre: SCI-FI</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/l.jpeg" alt="Movie 1">
+                            <h3>LOVER</h3>
+                            <p>Genre: DRAMA</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/l2.jpeg" alt="Movie 2">
+                            <h3>KATHI</h3>
+                            <p>Genre: ACTION</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/l3.jpeg" alt="Movie 2">
+                            <h3>DADA</h3>
+                            <p>Genre: LOVE</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                        <div class="movie-card">
+                            <img src="../IMAGE/V.jpeg" alt="Movie 3">
+                            <h3>VIRUMAN</h3>
+                            <p>Genre: Drama</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </section>
+        
+        </main>
+    </div>
+
+    <div class="container">
+        <!-- About Us Section -->
+        <section id="about-us" class="about-us">
+            <div class="about">
+              <img src="../IMAGE/ab.png" class="pic" />
+              <div class="text">
+                <h2>About Us</h2>
+                
+                <p><b>Welcome to Show Time</b> – Your Ultimate Movie Ticket Booking Destination!<br>
+
+                    At Show Time, we believe that every movie experience should be nothing short of magical.<br> Founded with a passion for cinema and a commitment to providing the best possible service, we are dedicated to making movie-going as seamless and enjoyable as possible.
+                    
+                    </p>
+                <div class="data">
+                  <a href="#" class="hire">MORE</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="container">
+
+            <h1 class="brand"><span>helping you is our pleasure</span></h1><br><br>
+        
+            <div class="wrapper">
+        
+                <!-- COMPANY INFORMATION -->
+                <div class="company-info">
+                    <h3>show time</h3>
+        
+                    <ul>
+                        <li><i class="fa fa-road"></i> 44 Main Street</li>
+                        <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                        <li><i class="fa fa-envelope"></i> test@phoenix.com</li>
+                    </ul>
+                </div>
+                <!-- End .company-info -->
+        
+                <!-- CONTACT FORM -->
+                <div class="contact" id="contact-us">
+                    <h3>E-mail Us</h3><BR>
+        
+                    <form id="contact-form">
+        
+                        <p>
+                            <label>First Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </p>
+        
+                        <p>
+                            <label>Last Name</label>
+                            <input type="text" name="company" id="company">
+                        </p>
+        
+                        <p>
+                            <label>E-mail Address</label>
+                            <input type="email" name="email" id="email" required>
+                        </p>
+        
+                        <p>
+                            <label>Phone Number</label>
+                            <input type="text" name="phone" id="phone">
+                        </p>
+        
+                        <p class="full">
+                            <label>Message</label>
+                            <textarea name="message" rows="5" id="message"></textarea>
+                        </p>
+        
+                        <p class="full">
+                            <button type="submit">Submit</button>
+                        </p>
+        
+                    </form>
+                    <!-- End #contact-form -->
+                </div>
+                <!-- End .contact -->
+        
+            </div>
+            <!-- End .wrapper -->
+        </div>
+        <!-- End .container -->
+</div>
+   <br><br>
+   <div id="location-popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Enter Location</h2>
+        <form>
+            <label for="manual-location">Manual Entry:</label>
+            <input type="text" id="manual-location" name="manual-location" placeholder="Enter your location">
+            
+            <h3>OR</h3>
+            
+            <label for="search-location">Search Location:</label>
+            <input type="text" id="search-location" name="search-location" placeholder="Search for a location">
+            
+            <h3>OR</h3>
+            
+            <label>Pin Location on Map:</label>
+            <div id="map" style="height: 300px; width: 100%;"></div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Map</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Location Map</a></li>
+                    <li><a href="#"><i class="fas fa-directions"></i> Directions</a></li>
+                    <li><a href="#"><i class="fas fa-map"></i> Current Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quicklinks</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-graduate"></i> HOME</a></li>
+                    <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> ABOUT US</a></li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i> CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                    <li><a href="#"><i class="fas fa-life-ring"></i> Support Center</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <ul class="quick-links">
+            <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul><br>
+        <p>&copy; 2024 Movie Ticket Booking. All rights reserved.</p><br>
+    </footer>
+    
+    <script>
+        let slideIndex = 0;
+        
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+            });
+        }
+        
+        function moveSlide(n) {
+            showSlide(slideIndex + n);
+        }
+        
+        showSlide(slideIndex);
+        
+        setInterval(() => moveSlide(1), 3000);
+         // Open the popup
+         function openPopup() {
+            document.getElementById('location-popup').style.display = 'flex';
+        }
+
+        // Close the popup
+        function closePopup() {
+            document.getElementById('location-popup').style.display = 'none';
+        }
+
+        // Initialize and add the map
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+            
+            const marker = new google.maps.Marker({
+                position: { lat: -34.397, lng: 150.644 },
+                map: map,
+                draggable: true
+            });
+
+            // Event listener to update position
+            map.addListener("click", (e) => {
+                marker.setPosition(e.latLng);
+            });
+
+            marker.addListener('dragend', function(e) {
+                console.log('New position: ' + e.latLng.lat() + ", " + e.latLng.lng());
+            });
+        }
+
+        // Load the Google Maps API script asynchronously
+        function loadMapScript() {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('a[href="#location"]').addEventListener('click', function(event) {
+                event.preventDefault();
+                openPopup();
+                loadMapScript();
+            });
+        });
+    </script>
+</body>
+</html>
