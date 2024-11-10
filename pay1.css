@@ -1,0 +1,274 @@
+/* pay1.css */
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcfbfb; /* Background Color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #19324c; /* Header Color */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #19324c;/* Footer Color */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  
+    width: 100%;
+    bottom: 0;
+}
+
+/* Payment Container Styles */
+.payment-container {
+    background-color: #B96A59; /* Card Color */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Booking Summary Styles */
+.booking-summary {
+    margin-bottom: 20px;
+}
+
+.booking-summary h2 {
+    margin: 0 0 10px 0;
+}
+
+.summary-details p {
+    margin: 5px 0;
+}
+
+.contribute {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contribute label {
+    margin-right: 10px;
+}
+
+.contribute p {
+    margin: 0;
+}
+
+/* Ticket Type Styles */
+.ticket-type {
+    margin-bottom: 20px;
+}
+
+.ticket-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.option img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Consent Styles */
+.consent {
+    margin: 15px 0;
+}
+
+.consent label {
+    margin-left: 5px;
+}
+
+/* Total Section Styles */
+.total-section {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.proceed-btn {
+    background-color: #4CAF50; /* Green Background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.proceed-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+footer a {
+    color: #434343;
+    text-decoration: none;
+}
+
+.payment-container {
+    background-color:#ffffff;
+    padding: 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-summary, .ticket-type, .total-section {
+    margin-bottom: 30px;
+}
+
+.booking-summary h2, .ticket-type h2 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.summary-details p, .ticket-type p, .amount-payable {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-payable {
+    font-weight: bold;
+    color: #273971;
+    font-size: 18px;
+}
+
+.contribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.contribute label {
+    font-size: 14px;
+    color: #555;
+}
+
+.contribute span {
+    color: #273971;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ticket-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option:last-child {
+    margin-right: 0;
+}
+
+.option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.instruction {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.consent {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+.consent input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #19324c;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-amount span {
+    font-size: 20px;
+}
+
+.proceed-btn {
+    background-color: white;
+    color: #747489;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.proceed-btn:hover {
+    background-color: #ff7979;
+    color: white;
+}

@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:  rgb(252, 255, 255);
+    color: #fff;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color:  #264564;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+   
+    
+    padding-top: 20px;
+    margin-top: 5%;
+}
+.sidebar img {
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 60%;
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+    
+}
+.sidebar a:hover {
+    text-decoration: underline;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #264564;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: fixed;
+    width: 100%;
+    margin-left: -1%;
+    margin-right: 20%;
+    
+}
+.header button, .movie button, .add-movie {
+    background-color: #264564;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+.header button:hover, .movie button:hover, .add-movie:hover {
+    background-color: #4f4b92;
+}
+.header .profile {
+    display: flex;
+    align-items: center;
+}
+.header .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.header .profile a {
+    color: #fff;
+    text-decoration: none;
+}
+.header .profile a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    background-color: #264564;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    height: 50%;
+    margin-top: 5%;
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 50%;
+}
+.card h2 {
+    margin: 10px 0;
+}
+
+.movies-container {
+    display: flex;
+    overflow-y: auto;
+    flex-wrap: wrap; /* Allow items to wrap */
+    max-height: 400px; /* Set a maximum height for the container */
+}
+.main-content h2{
+    color: black;
+
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 8px;
+    height: 50%;
+}
+
+.movie .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.movie .rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.movie .rating span {
+    color: gold;
+    margin: 0 2px;
+}
+.movie .duration {
+    margin-top: 10px;
+    text-align: center;
+}
+.add-movie {
+    background-color: #264564;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    flex-shrink: 0;
+    width: 10%;
+}
+footer {
+    background-color: #264564;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  
+    bottom: 0;
+    width: 100%;
+}
+footer .footer-content p {
+    margin: 5px 0;
+}
+footer .footer-content a {
+    color: #fff;
+    text-decoration: underline;
+}
+footer .footer-content a:hover {
+    text-decoration: none;
+}
+
+.popular-movies-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.movies-horizontal-scroll {
+    display: inline-block; /* Make the container fit the content */
+    padding: 10px 0;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.movie {
+    display: inline-block;
+    background-color: #264564;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    margin: 10px;
+    position: relative;
+    flex-shrink: 0;
+    height: 300px;
+    white-space: normal; /* Reset white-space for inner elements */
+}

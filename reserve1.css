@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding-top: 1rem;
+}
+
+.header, .filter, .footer {
+    padding: 15px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+
+header {
+    background-color: #19324c;
+    padding: 1rem 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 60px;
+    border-radius: 60%;
+}
+
+.actions button {
+    margin-left: 40px;
+    padding: 10px 10px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.filter button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+.status-filter button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f1f1f1;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: left;
+}
+
+.status.pending {
+    color: orange;
+}
+
+.status.confirmed {
+    color: green;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+button.edit, button.delete {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+  
+    padding-top: 5%;
+    padding-bottom: 1%;
+  }
+  /* reserve1.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    position: relative; /* Needed for absolute positioning of the button */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions .back-btn, .actions .add-booking-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.actions .back-btn {
+    background-color: #4CAF50; /* Green color */
+}
+
+.actions .add-booking-btn {
+    background-color: #333; /* Dark color */
+}
+
+.actions .back-btn:hover, .actions .add-booking-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #4CAF50; /* Green color */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+.status-filter button {
+    
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f1f1f1;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: left;
+}
+
+.status.pending {
+    color: orange;
+}
+
+.status.confirmed {
+    color: green;
+}
+
+footer {
+    background-color:#19324c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+  
+  /* Add this to your reserve1.css */
+
+.status-filter button.active {
+    background-color: #333; /* Dark background for active filter */
+    color: white;
+}

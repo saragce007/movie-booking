@@ -1,0 +1,434 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #264564;
+    color: #f7f4f4;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 60px;
+    border-radius: 60%;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+   margin-right: -90%;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #efefef;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #c4d3f5;
+    border-radius: 4px;
+}
+
+.login {
+    margin-left: 20px;
+}
+
+.login a {
+    color: #264564;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.login a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    
+}
+
+.movie-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.movie-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.movie-poster {
+    flex: 1;
+    text-align: center;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.show-times ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar-timing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-timing select, .calendar-timing input[type="time"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.timings-horizontal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timings-horizontal span {
+    background-color:#264564;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.timings-horizontal span:last-child {
+    margin-right: 0;
+}
+
+.reviews-likes p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reviews-likes p i {
+    margin-right: 5px;
+    color:#264564;
+}
+
+.search-location {
+    margin-top: 20px;
+}
+
+.search-location input {
+    padding: 10px;
+    width: calc(100% - 110px);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-location button {
+    padding: 10px 20px;
+    border: none;
+    background-color:#264564;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #264564;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.cinemas-list {
+    width: 110%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cinema-timings {
+    display: flex;
+    align-items: center;
+}
+
+.cinema-timings p {
+    margin-right: 20px;
+}
+/* Movie Cast styles */
+.movie-cast {
+    margin-top: 40px;
+    
+}
+
+.movie-cast h2 {
+    color: #333;
+}
+
+.cast-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cast-member {
+    text-align: center;
+}
+
+.cast-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+}
+
+.cast-member p {
+    margin: 10px 0 0;
+    color: #333;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+footer {
+  background-color: #2b445c;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 1rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+.quick-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.quick-links li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.quick-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quick-links a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+/* Existing CSS styles */
+
+/* Cinemas in Your Location Section */
+.cinemas-list {
+    width: 111%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.search-location {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-location input {
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-location button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #264564;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cinema {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cinema-details {
+    flex: 1;
+}
+
+.cinema-details h4 {
+    margin: 0 0 10px;
+    color: #264564;
+}
+
+.cinema-details p {
+    margin: 0 0 10px;
+}
+
+.cinema-image {
+    flex: 0 0 150px;
+    margin-left: 20px;
+}
+
+.cinema-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cinema-timings {
+    flex: 1;
+    text-align: right;
+}
+
+.cinema-timings p {
+    margin-bottom: 10px;
+}
+
+.timings-horizontal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.timings-horizontal span {
+    background-color: #264564;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.book-now {
+    flex: 0 0 auto;
+    margin-left: 20px;
+}
+
+.book-now .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #264564;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.book-now .button:hover {
+    background-color: #0056b3;
+}
+
+#noResults {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}

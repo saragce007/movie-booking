@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    display: flex;
+    
+   
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 60%;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name-balance {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.balance {
+    font-size: 14px;
+    color: #888;
+}
+
+.nav-links {
+    flex-grow: 1;
+}
+
+.nav-links a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+.nav-links i {
+    margin-right: 10px;
+}
+
+.settings-logout {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.settings-logout a {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.settings-logout a i {
+    margin-right: 10px;
+}
+
+.settings-logout a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin-left: 280px;
+    padding: 30px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-bar input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.top-bar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-buttons button {
+    background-color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.top-bar-buttons button:hover {
+    background-color: #555;
+}
+
+.featured-movie {
+    margin-bottom: 20px;
+}
+
+.featured-movie img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.popular-movies-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.movie {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.movie img {
+    width: 160px;
+    height: 240px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 14px;
+    color: gold;
+}
